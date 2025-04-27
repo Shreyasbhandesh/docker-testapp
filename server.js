@@ -29,8 +29,8 @@ app.post("/addUser", async (req, res) => {
     await client.connect(URL);
     console.log('Connected successfully to server');
 
-    const db = client.db("apnacollege-db");
-    const data = await db.collection('users').insertOne(userObj);
+    const db = client.db("Shreyas");
+    const data = await db.collection('list').insertOne(userObj);
     console.log(data);
     console.log("data inserted in DB");
     client.close();
